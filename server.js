@@ -23,8 +23,10 @@ app.get("/api/notes", (req, res) => {
 
 });
 
-
-
+/// THE * ROUTE WILL RETURN USER TO HOME PAGE AND SHOULD ALWAYS COME AFTER OTHER ROUTES THAT 'GET' OR IT WILL TAKE PRECEDENCE OVER THE OTHERS. ///// 
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/index.html"));
+});
 
 ///// APP IS LISTENING TO PORT //////////////
 app.listen(PORT, () => {
