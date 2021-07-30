@@ -28,18 +28,15 @@ app.get("/notes", (req, res) => {
 });
 
 
-/// GET * SHOULD BE USED HERE TO RETURN THE INDEX.HTML FILE 
-/// THE * ROUTE WILL RETURN USER TO HOME PAGE AND SHOULD ALWAYS COME AFTER OTHER NON API ROUTES THAT 'GET' OR IT WILL TAKE PRECEDENCE OVER THE OTHERS. ///// 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./public/index.html"));
-});
-
 //// GET /api/notes should read the db.json file and return all saved notes json
 app.get("/api/notes", (req, res) => {
+    console.log(userNotes);
     return res.json(userNotes);   /// will return all userNotes in json format 
 
 
 });
+
+
 
 
 ///// POST /API/NOTES SHOULD RECEIVE A NEW NOTE TO SAVE ON THE REQUEST BODY AND ADD IT TO DB.JSON FILE, & RETURN NEW NOTE TO CLIENT 
@@ -50,7 +47,11 @@ app.post("/api/notes", (req, res) => {
     res.json(newNote);
 })
 
-
+/// GET * SHOULD BE USED HERE TO RETURN THE INDEX.HTML FILE 
+/// THE * ROUTE WILL RETURN USER TO HOME PAGE AND SHOULD ALWAYS COME AFTER OTHER NON API ROUTES THAT 'GET' OR IT WILL TAKE PRECEDENCE OVER THE OTHERS. ///// 
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/index.html"));
+})
 
 ///// APP IS LISTENING TO PORT //////////////
 app.listen(PORT, () => {
