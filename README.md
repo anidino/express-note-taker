@@ -23,15 +23,19 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ## Description 
 This note taker was built using Node and the popular Node extention, Express. I used my knowledge of routing to connect the front end of the application to the backend. The result is a fully functional application that allows the user to add notes in order to be better organized. 
 
+## Link to Deployed Application 
+https://still-retreat-16151.herokuapp.com/
+
+
 ## ScreenShot of Deployed Application
 
 ![expressNoteTaker](https://user-images.githubusercontent.com/84213096/127723726-0d984040-69c8-4f6d-b90d-d614a4a87284.jpg)
 
 ## Demo of Deployed Application 
 
+https://user-images.githubusercontent.com/84213096/127774016-3ee0a1ea-1ea4-4c4f-a772-dabf07bd65e2.mp4
 
 
-https://user-images.githubusercontent.com/84213096/127723763-7bbcf653-8cb6-4f5d-9a87-d925380be524.mp4
 
 
 
