@@ -50,6 +50,13 @@ app.post("/api/notes", (req, res) => {
     res.json(newNote);
 })
 
+// app.delete("api/notes/:id", (req, res) => {
+//     for (let i = 0; i < userNotes.length; i++) {
+//         let deleteNote = userNotes[i];
+
+
+// }
+
 
 // THE * ROUTE WILL RETURN USER TO HOME PAGE AND SHOULD ALWAYS COME AFTER OTHER ROUTES THAT 'GET' OR IT WILL TAKE PRECEDENCE OVER THE OTHERS. // 
 app.get("*", (req, res) => {
